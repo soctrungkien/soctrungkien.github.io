@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Apps</title>
+  <style>
+  
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+    /* CSS gốc bạn gửi (rút gọn) + chỉnh sửa nhỏ */
+    :root {
+      --bg-primary: #121212;
+      --bg-secondary: #1e1e1e;
+      --card-bg: rgba(30, 30, 30, 0.8);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --text-primary: #f0f0f0;
+      --text-secondary: #b0b0b0;
+      --accent-color-1: #667eea;
+      --accent-color-2: #764ba2;
+      --error-color: #ff6b6b;
+      --primary-gradient: linear-gradient(135deg, var(--accent-color-1) 0%, var(--accent-color-2) 100%);
+    }
+
+    body {
+      font-family: 'Varela Round', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .card img {
+      width: 150px;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 2px solid var(--border-color);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+.card .tag {
+  display: inline-block;
+  background-color: rgba(102, 126, 234, 0.15); /* accent-color-1 nhẹ */
+  color: var(--accent-color-1);
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent-color-1);
+  font-size: 0.85rem;
+}
+
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+.card a {
+  /* Các thuộc tính hiện có */
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary-gradient);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+
+  /* Thêm margin để tạo khoảng cách */
+  margin: 10px; /* Tạo khoảng cách 10px cho cả 4 phía (trên, phải, dưới, trái) */
+  /* Hoặc bạn có thể dùng các thuộc tính cụ thể hơn */
+  /* margin-right: 15px; */ /* Khoảng cách ngang giữa các nút */
+  /* margin-bottom: 20px; */ /* Khoảng cách dọc giữa các nút */
+}
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Custom scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color-1);
+  border-radius: 10px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-2);
+}
+
+/* Fallback for Firefox */
+/* Lưu ý: Firefox chỉ hỗ trợ tùy chỉnh màu sắc cơ bản, không tùy chỉnh hình dạng */
+@supports (scrollbar-color: var(--accent-color-1) var(--bg-secondary)) {
+  * {
+    scrollbar-color: var(--accent-color-1) var(--bg-secondary);
+    scrollbar-width: thin;
+  }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>My Apps</h2>
+    <div class="tag">Ứng dụng ở đây có chứa sự tâm huyết</div>
+    <p>Nhấn vào nút để vào web</p>
+    <a href="https://soctrungkien.github.io/KeyGen/" target="_blank">KeyGen</a>
+    <a href="https://soctrungkien.github.io/Meme/" target="_blank">Meme ngẫu nhiên</a>
+    <a href="https://soctrungkien.github.io/GAG-Calc/" target="_blank">GAG Calc</a>
+    <a href="https://soctrungkien.github.io/CreatePage/" target="_blank">CreatePage</a>
+  </div>
+</body>
+</html>
